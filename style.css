@@ -1,0 +1,34 @@
+*{box-sizing:border-box}
+:root{--bg:#070d1c;--panel:#0d1930;--tile:#17243d;--line:#253755;--blue:#4e8cff;--muted:#aab8ce}
+body{margin:0;min-height:100vh;font-family:Inter,Arial,sans-serif;color:#f5f7ff;background:radial-gradient(ellipse at 50% 0%,#13264b 0,#080f20 48%,#050914 100%);display:grid;place-items:center;padding:28px 14px}
+.page{width:100%;max-width:590px}
+.profile-card{position:relative;text-align:center;padding:48px 28px 24px;border:1px solid rgba(140,170,220,.12);border-radius:30px;background:linear-gradient(145deg,rgba(18,32,57,.97),rgba(10,19,37,.98));box-shadow:0 24px 80px #0008;overflow:hidden}
+.profile-card:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,#528dff,transparent);opacity:.8}
+.avatar-wrap{width:142px;height:142px;margin:0 auto 28px;border-radius:50%;padding:4px;border:2px solid #4e8cff;box-shadow:0 0 25px #347bff35;position:relative;background:#050b18}
+.avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.avatar-fallback{display:none;position:absolute;inset:4px;border-radius:50%;background:#142642;color:#8fb6ff;place-items:center;font-weight:800;letter-spacing:2px;font-size:15px}
+h1{font-size:clamp(27px,6vw,38px);margin:0;font-weight:800;letter-spacing:-1px}
+.role{font-size:17px;color:#d3dced;margin:12px 0 0}
+.bio{font-size:13px;color:var(--muted);line-height:1.6;margin:12px auto 30px;max-width:390px}
+.links-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.link-card{min-height:112px;border:1px solid rgba(155,180,220,.09);border-radius:19px;background:linear-gradient(145deg,#1b2a46,#14213a);color:#dce7fa;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:.22s ease;cursor:pointer;font:inherit}
+.link-card:hover{transform:translateY(-4px);border-color:#4e8cff;box-shadow:0 8px 25px #397cff26;background:#1c3154}
+.link-card b{font-size:11px;letter-spacing:.7px;font-weight:700}
+.icon{width:29px;height:29px;color:#a9bad6}
+.icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon svg path:first-child:not(:only-child){ }
+.link-card:first-child .icon svg,.link-card:nth-child(2) .icon svg{fill:currentColor;stroke:none}
+.link-card:nth-child(2) .icon svg path{fill:currentColor}
+.link-card:nth-child(1) .icon svg path{fill:currentColor}
+.icon .fill{fill:currentColor;stroke:none}
+.info-card{grid-column:2}
+footer{font-size:11px;color:#7385a2;margin-top:28px}
+.modal{position:fixed;inset:0;background:#020611c9;display:none;place-items:center;padding:20px;z-index:5}
+.modal.show{display:grid}
+.modal-box{width:min(100%,390px);background:#101d35;border:1px solid #2b4267;border-radius:24px;padding:34px 26px 28px;text-align:center;position:relative;box-shadow:0 20px 70px #0009}
+.close{position:absolute;right:16px;top:10px;border:0;background:none;color:#dce7fa;font-size:30px;cursor:pointer}
+.mini-avatar{width:48px;height:48px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:#244574;color:white;font-size:24px;font-weight:800}
+.modal-box h2{margin:8px 0 12px}
+.modal-box p{color:#b9c7dc;line-height:1.7;font-size:14px}
+.contact-button{display:inline-block;margin-top:14px;padding:12px 22px;border-radius:12px;background:#3678ed;color:white;text-decoration:none;font-weight:700;font-size:13px}
+@media(max-width:390px){.profile-card{padding:36px 16px 22px}.links-grid{gap:9px}.link-card{min-height:98px;border-radius:15px}.link-card b{font-size:9px}.avatar-wrap{width:126px;height:126px}}
